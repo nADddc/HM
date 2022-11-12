@@ -1,0 +1,73 @@
+задание 1
+N = int(input())
+a = int(input())
+b = int(input())
+for number in range(N, 0, -1):
+ if number % 2 != 0:
+ if a < number < b:
+ continue
+ else:
+ print(number)
+ задание 2
+ import math
+while True:
+    print('Введите команду:')
+    command = str(input())
+
+    if command == 'Лого':
+        print('Введите строку:')
+        line = str(input())
+        line_len = len(line)
+        L = math.log(line_len)
+        print(f'LN({line_len}) = {round(L, 3)}')
+
+    if command == 'Триго':
+        print('Введите число:')
+        D = math.radians(float(input()))
+        print(f'sin({D}) = {round(math.sin(D), 6)}')
+        print(f'cos({D}) = {round(math.cos(D), 6)}')
+        print(f'tg({D}) = {round(math.tan(D), 6)}')
+        print(f'ctg({D}) = {round(1/math.tan(D), 6)}')
+
+    if command == 'Конец':
+        break
+ задание 3 
+ import random
+a = random.randint(0, 1000)
+b = random.randint(0, 1000)
+
+if a > b:
+    max, min = a, b
+else:
+    max, min = b, a
+print(min, max)
+N = int(input())
+if min <= N <= max:
+    print("Lucky!")
+else:
+    print("Try again!")
+задание 4 
+import math, random
+while True:
+    a = int(input())
+    b = int(input())
+    M = random.randint(a, b)
+    for i in range(1, M+1):
+        print(round(math.log10(i), 3))
+
+    print('Желаете продолжить? Y/N')
+    command = str(input())
+    if command.upper() == 'Y':
+        continue
+    else:
+        break
+задание 5 
+import math
+N = int(input())
+for i in range(1, N+1):
+    if i % 5 == 0:
+        continue
+    circumference = 2 * math.pi * i
+    square_sq = math.pi * (i ** 2)
+    print(f'Длина окружности с радиусом {i}: {round(circumference, 2)}')
+    print(f'Площадь круга с радиусом {i}: {round(square_sq, 2)}')
