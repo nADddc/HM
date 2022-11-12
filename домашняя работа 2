@@ -1,0 +1,47 @@
+a=int(input())
+if (10<a<22) or ( 30<a<40):
+    print("точка в множестве")
+else:
+    print("точка вне множества")
+'''
+'''
+a=int(input())
+b=int(input())
+if (-5<a<=0 and -5<b<=0) or(2<a<=7 and 2<b<=7):
+    print("да")
+else:
+    print("нет")
+'''
+'''
+a=float(input())
+b=float(input())
+v=a/b
+if v<30:
+    print("медленно")
+elif 30<=v<=60:
+    print("средне")
+else:
+    print("быстро")
+ '''
+a=str(input())
+if len(a)>=3 and len(a)<=15:
+    print("никнейм принят")
+elif len(a)<3 :
+    print("никнейм должен состоять из 3")
+else:
+    print("никнейм может состоять минимум из 15")
+    
+a=int(input())
+b=a//100
+c=a//10%10
+d=a%10
+
+sr=b+c+d-(min(b,c,d)+max(b,c,d))
+if (sr==max(b,c,d)-min(b,c,d)):
+          print("интересно найс")
+else:
+    print("неинтересно мне")
+
+a = input()
+if "кот" in a:
+ print("Мы погладили кота!")
