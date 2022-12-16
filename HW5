@@ -1,0 +1,76 @@
+1.
+
+N = int(input())
+stroka = ''
+for i in range(N):
+    word = str(input())
+    stroka = stroka + word[0]
+
+print(stroka.upper())
+
+2.
+
+task_2 = str(input())
+print(len(task_2))
+print(task_2[0])
+print(task_2[-1])
+
+reversed_str = ''
+for letter in reversed(task_2):
+    reversed_str = reversed_str + letter
+print(reversed_str)
+
+odd = ''
+even = ''
+for i in range(len(task_2)):
+    if i % 2 == 0:
+        even = even + task_2[i]
+    else:
+        odd = odd + task_2[i]
+print(even)
+print(odd)
+
+3.
+
+a3 = str(input())
+alphabet_nums = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+count = 0
+index = ''
+if a3.isalpha():
+    for i in range(len(a3)):
+        if a3[i].lower() == 'q':
+            count = count + 1
+    print(count)
+elif a3.isdigit():
+    for i in range(len(a3)):
+        num = int(a3[i]) * 10
+        print(num)
+for i in range(len(a3)):
+    if a3[i] in alphabet_nums:
+        pass
+    else:
+        index = index + str(i) + ' '
+print(index)
+
+4
+
+alphabet_nums = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+stop_word = True
+while stop_word:
+    print('Задайте строку: ')
+    task_4 = str(input())
+    if task_4.lower() == 'stop':
+        stop_word = False
+    elif task_4.isdigit():
+        print('Цифровая строка')
+    elif task_4.isalpha():
+        print('Буквенная строка')
+    else:
+        spec_symbols = False
+        for i in range(len(task_4)):
+            if task_4[i] in alphabet_nums:
+                pass
+            else:
+                spec_symbols = True
+        if not spec_symbols:
+            print('Смешанная строка')
