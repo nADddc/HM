@@ -1,0 +1,59 @@
+1.
+
+import math, random
+print('Задайте размер списка:')
+N = int(input())
+print('Задайте начало диапазона:')
+x = int(input())
+print('Задайте конец диапазона:')
+y = int(input())
+
+task_1 = []
+for i in range(N):
+    task_1.append(random.randint(x, y))
+
+print(task_1)  
+print(len(task_1))  
+print(max(task_1))  
+print(min(task_1))  
+
+task_1.sort()
+print(task_1)  
+
+task_1.sort(reverse=True)
+print(task_1)  
+
+2.
+import math, random
+print('Задайте размер списка:')
+N = int(input())
+task_2 = []
+for i in range(N):
+    task_2.append(random.randint(0, 1))
+
+print(task_2)  
+print(task_2.count(0)) 
+print(task_2.count(1)) 
+
+indexes_zero = []
+for position, element in enumerate(task_2):
+    if element == 0:
+        indexes_zero.append(position)
+print(indexes_zero)
+
+3.
+import math, random
+print('Задайте размер списка:')
+N = int(input())
+task_3 = []
+for i in range(N):
+    task_3.append(random.randint(0, 9))
+print(task_3)
+
+print('Задайте значение, которое нужно удалить из списка:')
+elem_remove = int(input())
+
+for i, elem in reversed(list(enumerate(task_3))): 
+    if elem == elem_remove:
+        task_3.pop(i)
+print(task_3)
